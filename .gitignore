@@ -1,0 +1,35 @@
+# # # Arquivos de compilação Java # # #
+bin/
+
+# Ignora todos os arquivos .class, onde quer que estejam
+*.class
+
+
+# # # Arquivos de IDE e Editores # # #
+.vscode/
+
+# Também é uma boa prática ignorar configurações de outras IDEs populares
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+
+# # # Arquivos de Build Tools (prevenção para o futuro) # # #
+target/
+build/
+.gradle/
+
+
+# # # Arquivos de Log e Temporários # # #
+*.log
+*.tmp
+*.temp
+
+
+# # # Arquivos do Sistema Operacional # # #
+.DS_Store
+
+# Arquivos do Windows
+Thumbs.db
