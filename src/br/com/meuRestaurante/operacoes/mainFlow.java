@@ -43,7 +43,9 @@ public class mainFlow {
                 {
                     case "1":
                         clientList.add(myClienteFac.newClienteFac(userInput, myConsole));
-                        System.out.println("| Cliente cadastrado com sucesso!");
+                        System.out.println("\n| Cliente cadastrado com sucesso!");
+                        System.err.println("\n| Retornando ao Menu...");
+                        myConsole.sleepOneSecond();
                         break;
 
                     case "2":
@@ -63,7 +65,8 @@ public class mainFlow {
                         break;
                     
                     case "0":
-                        System.out.print("| Desligando...");
+                        System.out.print("\n| Desligando...");
+                        myConsole.sleepOneSecond();
                         myConsole.printHead();
                         System.exit(0); 
                         break;
@@ -86,9 +89,11 @@ public class mainFlow {
 
         int indexCliente = myConsole.inputAnInt(userInput, "| Digite o ID do cliente para o pedido: ", 3);
         
-        if (indexCliente == -1 || indexCliente >= clientList.size())
+        if (indexCliente < 0 || indexCliente >= clientList.size())
         {
-            System.err.println("| ID do cliente inválido!");
+            System.err.println("\n| ID do cliente inválido!");
+            System.err.println("\n| Retornando ao Menu...");
+            myConsole.sleepOneSecond();
             return;
         }
 

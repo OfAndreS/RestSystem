@@ -15,6 +15,16 @@ public class ConsoleUI
         System.out.print("\n\n|  * * * * * * * * * * * * * * * * * * *\n\n");
     }
 
+    public void sleepOneSecond()
+    {
+        try {
+            Thread.sleep(1000); 
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.err.println("| A pausa foi interrompida.");
+        }
+    }
+
     public void printMenu()
     {
         System.out.print("| MENU PRINCIPAL\n" +
@@ -65,14 +75,14 @@ public class ConsoleUI
         System.out.println("| LISTA DE CLIENTES CADASTRADOS");
         if (clientList.isEmpty())
         {
-            System.out.println("| Nenhum cliente cadastrado.");
+            System.out.println("\n| Nenhum cliente cadastrado.");
             return;
         }
 
         for (int i = 0; i < clientList.size(); i++)
         {
             Cliente cliente = clientList.get(i);
-            System.out.printf("| [%d] Nome: %s | Idade: %d | Pedidos: %d\n", i, cliente.getNome(), cliente.getIdade(), cliente.getQuantidadeDePedidos());
+            System.out.printf("| ( %d ) Nome: %s | Idade: %d | Pedidos: %d\n", i, cliente.getNome(), cliente.getIdade(), cliente.getQuantidadeDePedidos());
         }
     }
 
@@ -93,7 +103,7 @@ public class ConsoleUI
         System.out.println("| HISTÓRICO DE PEDIDOS");
         if (pedidoList.isEmpty())
         {
-            System.out.println("| Nenhum pedido foi realizado.");
+            System.out.println("\n| Nenhum pedido foi realizado.");
             return;
         }
 

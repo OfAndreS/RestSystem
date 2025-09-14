@@ -10,6 +10,8 @@ public class ClienteFactory
 {
     public Cliente newClienteFac(Scanner userInput, ConsoleUI myConsole)
     {
+        myConsole.printHead();
+        System.out.println("| CADASTRO DE UM CLIENTE\n");
         String nome = myConsole.inputAnString(userInput, "| Digite o nome do cliente: ", 3);
         int idade = myConsole.inputAnInt(userInput, "| Digite a idade do cliente: ", 3);
 
