@@ -28,6 +28,8 @@ public class mainFlow {
 
     public void startMenu()
     {
+        myConsole.printHead();
+        myConsole.printLogo();
         preencherCardapio();
         try (Scanner userInput = new Scanner(System.in))
         {
@@ -63,7 +65,7 @@ public class mainFlow {
                         break;
 
                     case "5":
-                        removerPedido(pedidoList, userInput, myConsole);
+                        removerPedido(pedidoList, userInput);
                         break;
 
                     case "6":
@@ -141,7 +143,7 @@ public class mainFlow {
         }
     }
 
-    public void removerPedido(ArrayList<Pedido> pedidoList, Scanner userInput, ConsoleUI myConsole)
+    public void removerPedido(ArrayList<Pedido> pedidoList, Scanner userInput)
     {
         if(!myConsole.listarPedidos(pedidoList))
         {
@@ -150,7 +152,7 @@ public class mainFlow {
 
         int userIndex = myConsole.inputAnInt(userInput, "\n| Digite o ID do pedido para remoção: ", 3);
         
-        if (userIndex < 0 || userIndex >= clientList.size())
+        if (userIndex < 0 || userIndex > clientList.size())
         {
             System.err.println("\n| ID do pedido inválido!");
             System.err.println("\n| Retornando ao Menu...");
