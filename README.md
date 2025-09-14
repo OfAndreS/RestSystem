@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" alt="Banner do Projeto" width="600"/>
+  <img style="border-radius: 25px;" width="947" height="284" alt="image" src="https://github.com/user-attachments/assets/f77e1d40-e3da-4c54-878f-8fc5b260cd66" />
 </div>
 
 <div align="center">
