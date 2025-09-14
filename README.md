@@ -2,14 +2,9 @@
   <img style="border-radius: 25px;" width="947" height="284" alt="image" src="https://github.com/user-attachments/assets/f77e1d40-e3da-4c54-878f-8fc5b260cd66" />
 </div>
 
-<img width="1024" height="290" alt="unnamed" src="https://github.com/user-attachments/assets/36a4e5b3-a60d-4c5a-9785-d4a675fbe03d" />
-
-<img width="1024" height="290" alt="unnamed (1)" src="https://github.com/user-attachments/assets/294a61cd-59c5-4e5c-ad73-21621b82a6f4" />
+---
 
 <div align="center">
-  <h1>
-    Rest System
-  </h1>
   <strong>Um subtítulo curto e impactante que descreve seu projeto em uma linha.</strong>
 </div>
 
