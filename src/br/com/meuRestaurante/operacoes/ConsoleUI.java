@@ -33,7 +33,8 @@ public class ConsoleUI
                          "| ( 2 ) - Listar Clientes\n" +
                          "| ( 3 ) - Criar Novo Pedido\n" +
                          "| ( 4 ) - Listar Pedidos\n" +
-                         "| ( 5 ) - Ver Cardápio\n" +
+                         "| ( 5 ) - Cancelar Pedido\n" +
+                         "| ( 6 ) - Ver Cardápio\n" +
                          "|\n" +
                          "| ( 0 ) - Sair\n");
     }
@@ -93,30 +94,34 @@ public class ConsoleUI
         for (int i = 0; i < cardapio.size(); i++)
         {
             Produto produto = cardapio.get(i);
-            System.out.printf("| [%d] %s - R$ %.2f\n", i, produto.getNome(), produto.getPreco());
+            System.out.printf("| ( %d ) %s - R$ %.2f\n", i, produto.getNome(), produto.getPreco());
         }
     }
 
-    public void listarPedidos(ArrayList<Pedido> pedidoList)
+    public boolean listarPedidos(ArrayList<Pedido> pedidoList)
     {
+        int couter = 0;
         printHead();
         System.out.println("| HISTÓRICO DE PEDIDOS");
         if (pedidoList.isEmpty())
         {
             System.out.println("\n| Nenhum pedido foi realizado.");
-            return;
+            return false;
         }
 
         for(Pedido pedido : pedidoList)
         {
-            System.out.printf("\n| Pedido para o cliente: %s\n", pedido.getCliente().getNome());
+            System.out.printf("\n| ID ( %d ) \n| Pedido para o cliente: %s\n", couter, pedido.getCliente().getNome());
             System.out.println("| Itens:");
             for (Produto item : pedido.getItens())
             {
                 System.out.printf("|  - %s (R$ %.2f)\n", item.getNome(), item.getPreco());
             }
             System.out.printf("| Total do Pedido: R$ %.2f\n", pedido.getTotal());
-            System.out.println("|------------------------------------");
+            System.out.println("|");
+            couter++;
         }
+
+        return true;
     }
 }

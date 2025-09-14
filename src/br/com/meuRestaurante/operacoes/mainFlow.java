@@ -54,6 +54,8 @@ public class mainFlow {
                     
                     case "3":
                         criarNovoPedido(userInput);
+                        System.err.println("\n| Retornando ao Menu...");
+                        myConsole.sleepOneSecond();
                         break;
 
                     case "4":
@@ -61,6 +63,10 @@ public class mainFlow {
                         break;
 
                     case "5":
+                        removerPedido(pedidoList, userInput, myConsole);
+                        break;
+
+                    case "6":
                         myConsole.mostrarCardapio(cardapio);
                         break;
                     
@@ -87,9 +93,9 @@ public class mainFlow {
             return;
         }
 
-        int indexCliente = myConsole.inputAnInt(userInput, "| Digite o ID do cliente para o pedido: ", 3);
+        int userIndex = myConsole.inputAnInt(userInput, "| Digite o ID do cliente para o pedido: ", 3);
         
-        if (indexCliente < 0 || indexCliente >= clientList.size())
+        if (userIndex < 0 || userIndex >= clientList.size())
         {
             System.err.println("\n| ID do cliente inválido!");
             System.err.println("\n| Retornando ao Menu...");
@@ -97,13 +103,13 @@ public class mainFlow {
             return;
         }
 
-        Cliente clienteSelecionado = clientList.get(indexCliente);
+        Cliente clienteSelecionado = clientList.get(userIndex);
         Pedido novoPedido = new Pedido(clienteSelecionado);
         
         while(true)
         {
             myConsole.mostrarCardapio(cardapio);
-            System.out.println("| Digite o ID do produto para adicionar ou [-1] para finalizar o pedido.");
+            System.out.println("| Digite o ID do produto para adicionar ou ( -1 ) para finalizar o pedido.");
             int indexProduto = myConsole.inputAnInt(userInput, "| Escolha: ", 3);
 
             if (indexProduto == -1)
@@ -127,11 +133,33 @@ public class mainFlow {
         {
             pedidoList.add(novoPedido);
             clienteSelecionado.incrementarQuantidadeDePedidos();
-            System.out.printf("| Pedido para %s finalizado com sucesso! Total: R$ %.2f\n", clienteSelecionado.getNome(), novoPedido.getTotal());
+            System.out.printf("\n| Pedido para %s finalizado com sucesso! Total: R$ %.2f\n", clienteSelecionado.getNome(), novoPedido.getTotal());
         }
         else
         {
-            System.out.println("| O pedido foi cancelado pois nenhum item foi adicionado.");
+            System.out.println("\n| O pedido foi cancelado pois nenhum item foi adicionado.");
         }
+    }
+
+    public void removerPedido(ArrayList<Pedido> pedidoList, Scanner userInput, ConsoleUI myConsole)
+    {
+        if(!myConsole.listarPedidos(pedidoList))
+        {
+            return;
+        }
+
+        int userIndex = myConsole.inputAnInt(userInput, "\n| Digite o ID do pedido para remoção: ", 3);
+        
+        if (userIndex < 0 || userIndex >= clientList.size())
+        {
+            System.err.println("\n| ID do pedido inválido!");
+            System.err.println("\n| Retornando ao Menu...");
+            myConsole.sleepOneSecond();
+            return;
+        }
+        
+        pedidoList.remove(0);
+
+
     }
 }
