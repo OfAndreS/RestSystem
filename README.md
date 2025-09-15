@@ -2,6 +2,8 @@
   <img width="1024" height="256" alt="unnamed (3)" src="https://github.com/user-attachments/assets/889070be-c8e5-481f-bfd3-ee05a702ea6a" />
 </div>
 
+<br>
+
 ---
 
 <div align="center">
@@ -20,19 +22,21 @@
 <br>
 
 <p align="center">
-  <a href="#-sobre-o-projeto">Sobre</a> •
-  <a href="#-funcionalidades">Funcionalidades</a> •
-  <a href="#-tecnologias">Tecnologias</a> •
-  <a href="#-como-executar">Como Executar</a> •
-  <a href="#-autor">Autor</a>
+  <a href="sobre-o-projeto">Sobre</a> •
+  <a href="funcionalidades">Funcionalidades</a> •
+  <a href="tecnologias">Tecnologias</a> •
+  <a href="como-executar">Como Executar</a> •
+  <a href="autor">Autor</a>
 </p>
 <br>
 
 ---
 
+<br>
+
 ## **Sobre o Projeto**
 
-Este projeto é uma demonstração de como criar um README visualmente agradável no GitHub. A ideia é usar recursos de Markdown e HTML para organizar as informações de forma clara e atrativa, semelhante a uma nota bem estruturada no Obsidian.
+RestSystem é um sistema de gerenciamento de pedidos para restaurantes, desenvolvido em Java como um projeto de console. Ele permite o cadastro de clientes, criação e listagem de pedidos, e visualização do cardápio.
 
 <div align="center">
   <img width="1240" height="490" alt="image" src="https://github.com/user-attachments/assets/38e1ea28-79ac-4e89-a48f-065ba7939ecb" />
@@ -41,45 +45,67 @@ Este projeto é uma demonstração de como criar um README visualmente agradáve
 <br>
 
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- [x] Estrutura visual com Banner e Badges.
-- [x] Demonstração de GIF animado.
-- [x] Tabela de tecnologias com ícones.
-- [ ] Adicionar seção de contribuição.
-- [ ] Criar um GIF para a seção "Como Executar".
+- [x] Cadastro de Clientes: Permite registrar novos clientes no sistema.
+- [x] Listagem de Clientes: Exibe todos os clientes cadastrados.
+- [x] Criação de Pedidos: Permite criar novos pedidos associados a um cliente.
+- [x] Listagem de Pedidos: Mostra o histórico de todos os pedidos realizados.
+- [x] Cancelamento de Pedidos: Funcionalidade para remover um pedido existente.
+- [x] Visualização do Cardápio: Apresenta o menu do restaurante.
 
+<br>
 
-## 🛠 Tecnologias
+## Tecnologias
 
 As seguintes ferramentas e tecnologias foram usadas na construção do projeto:
 
 | Ferramenta | Descrição |
 |-----------|----------------------------------------------------------------|
-| **HTML5** | Usado para criar a estrutura e permitir alinhamento e seções.  |
-| **Markdown**| Linguagem base para toda a escrita e formatação do README.   |
-| **Shields.io**| Para a criação das badges de status do projeto.             |
-| **Canva/Figma**| Para a criação do banner e outras imagens personalizadas.    |
+| **Java** | Usado para criar a estrutura e permitir alinhamento e seções.  |
+
 <br>
 
-## 👨‍💻 Como Executar
+## Como Executar
 
 Para ter uma cópia local deste projeto e executá-lo, siga os passos abaixo.
 
 <details>
   <summary><strong>Pré-requisitos</strong></summary>
   
-  - Você vai precisar do [Git](https://git-scm.com) instalado na sua máquina.
-  - É bom ter um editor de texto como o [VS Code](https://code.visualstudio.com/).
+  - Você vai precisar do Java Development Kit (JDK) instalado na sua máquina.
+  - Você vai precisar do Git instalado na sua máquina.
+  - É bom ter um editor de texto como o VS Code.
 
 </details>
 
 <details>
   <summary><strong>Clonando o Repositório</strong></summary>
 
-  ```bash
-  # Clone este repositório
-  $ git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
+<br>
 
-  # Acesse a pasta do projeto no terminal/cmd
-  $ cd SEU_REPOSITORIO
+1 )  **Navegue até o diretório `src`:**
+
+<!-- end list -->
+
+```bash
+$ cd src
+```
+
+2 )  **Compile os arquivos Java:**
+
+<!-- end list -->
+
+```bash
+$ javac br/com/meuRestaurante/Main.java br/com/meuRestaurante/operacoes/mainFlow.java br/com/meuRestaurante/operacoes/ConsoleUI.java br/com/meuRestaurante/factory/ClienteFactory.java br/com/meuRestaurante/modelos/Cliente.java br/com/meuRestaurante/modelos/Pedido.java br/com/meuRestaurante/modelos/Produto.java
+```
+
+3 )  **Execute a classe principal:**
+
+<!-- end list -->
+
+```bash
+$ java br.com.meuRestaurante.Main
+```
+
+</details>
