@@ -5,15 +5,18 @@
 ---
 
 <div align="center">
-  <strong>Um subtítulo curto e impactante que descreve seu projeto em uma linha.</strong>
+  <strong>Um sistema simples de pedidos para um restourante.</strong>
 </div>
 
+<br>
+
 <div align="center">
-  <img src="https://img.shields.io/github/license/MicaelliMedeiros/README-Template?style=for-the-badge" alt="Licença">
-  <img src="https://img.shields.io/github/stars/MicaelliMedeiros/README-Template?style=for-the-badge" alt="Stars">
-  <img src="https://img.shields.io/github/forks/MicaelliMedeiros/README-Template?style=for-the-badge" alt="Forks">
-  <img src="https://img.shields.io/github/last-commit/MicaelliMedeiros/README-Template?style=for-the-badge" alt="Último Commit">
+  <img src="https://img.shields.io/github/license/OfAndreS/RestSystem?style=for-the-badge" alt="Licença">
+  <img src="https://img.shields.io/github/stars/OfAndreS/RestSystem?style=for-the-badge" alt="Stars">
+  <img src="https://img.shields.io/github/forks/OfAndreS/RestSystem?style=for-the-badge" alt="Forks">
+  <img src="https://img.shields.io/github/last-commit/OfAndreS/RestSystem?style=for-the-badge" alt="Último Commit">
 </div>
+
 <br>
 
 <p align="center">
@@ -25,13 +28,15 @@
 </p>
 <br>
 
+---
 
-## 🚀 Sobre o Projeto
+## **Sobre o Projeto**
 
 Este projeto é uma demonstração de como criar um README visualmente agradável no GitHub. A ideia é usar recursos de Markdown e HTML para organizar as informações de forma clara e atrativa, semelhante a uma nota bem estruturada no Obsidian.
 
 <div align="center">
-  <img src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" width="500" />
+  <img width="1240" height="490" alt="image" src="https://github.com/user-attachments/assets/38e1ea28-79ac-4e89-a48f-065ba7939ecb" />
+
 </div>
 <br>
 
